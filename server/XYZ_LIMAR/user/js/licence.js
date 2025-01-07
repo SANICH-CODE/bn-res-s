@@ -10,7 +10,10 @@ document.getElementById('authLink').addEventListener('click', function(event) {
         window.location.href = './user_000666/'; // Переадресация для первого пользователя
     } else if (code === 'aboba228') { // Замените 'anotherCode' на код для второго пользователя
         window.location.href = './user_012579/'; // Переадресация для второго пользователя
-    } else {
+    } else if (code === 'test') { // Замените 'anotherCode' на код для второго пользователя
+        window.location.href = './user_test/'; // Переадресация для второго пользователя
+    } else
+    {
         messageDiv.textContent = 'Неверный код';
     }
 });
