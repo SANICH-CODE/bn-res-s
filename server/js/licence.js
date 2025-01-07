@@ -1,1 +1,2 @@
-window.confirm('Вы хотите перейти на YouTube.com. Продолжить?');
+const referrer = document.referrer;
+console.log(referrer);
