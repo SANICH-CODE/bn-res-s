@@ -1,7 +1,7 @@
 document.getElementById('authLink').addEventListener('click', function(event) {
     event.preventDefault(); // Отменяем переход по ссылке
 
-    const code = prompt('Содержимое защищено, введите код доступа');
+    const code = prompt('Содержимое защищено, введите код доступа!');
     const messageDiv = document.getElementById('message');
 
     if (code === null) {
