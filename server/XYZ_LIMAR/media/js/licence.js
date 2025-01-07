@@ -1,1 +1,0 @@
-window.confirm('Вы хотите перейти на YouTube.com. Продолжить?');
