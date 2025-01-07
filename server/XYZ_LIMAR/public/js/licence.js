@@ -39,7 +39,7 @@ document.getElementById('publiclink_7').addEventListener('click', function(event
 document.getElementById('publiclink_8').addEventListener('click', function(event) {
     event.preventDefault(); // Отменяем переход по ссылке
     
-    window.location.href = '/https://public.bn-team.xyz/spec/Qk4gU1BFQzA4';} // Переадресация
+    window.location.href = 'https://public.bn-team.xyz/spec/Qk4gU1BFQzA4';} // Переадресация
 );
 document.getElementById('publiclink_9').addEventListener('click', function(event) {
     event.preventDefault(); // Отменяем переход по ссылке
