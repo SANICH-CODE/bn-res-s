@@ -28,6 +28,6 @@ document.getElementById('authLink').addEventListener('click', function(event) {
     } else if (user === 'test') { // Замените 'anotherCode' на код для второго пользователя
         window.location.href = './user_test/'; // Переадресация для второго пользователя
     } else {
-        messageDiv.textContent = 'Неверный код';
+        messageDiv.textContent = '/server/';
     }
 });
