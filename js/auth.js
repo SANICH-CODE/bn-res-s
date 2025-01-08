@@ -1,13 +1,13 @@
 document.getElementById('authLink').addEventListener('click', function(event) {
     event.preventDefault(); // Отменяем переход по ссылке
 
-    const user = prompt('Содержимое защищено, введите ID:');
+    const user = prompt('Содержимое защищено\nВведите ID:');
     const messageDiv = document.getElementById('message');
 
     if (user === null) {
         messageDiv.textContent = 'Действие отменено';
     } else if (user === '000666') {
-        const code = prompt('Пользователь Sergei Nikitko\nВведите пароль:');
+        const code = prompt('ID: 000666\nПользователь: Sergei Nikitko\nВведите пароль:');
         if (code === null) {
             messageDiv.textContent = 'Неверный пароль';
         } else if (code === 'sn2009sn') {
@@ -17,7 +17,7 @@ document.getElementById('authLink').addEventListener('click', function(event) {
         }
         
     } else if (user === '012579') { // Замените 'anotherCode' на код для второго пользователя
-        const code = prompt('Пользователь Arseniy Degtyarev\nВведите пароль:');
+        const code = prompt('ID: 012579\nПользователь: Arseniy Degtyarev\nВведите пароль:');
         if (code === null) {
             messageDiv.textContent = 'Неверный пароль';
         } else if (code === 'aboba228') {

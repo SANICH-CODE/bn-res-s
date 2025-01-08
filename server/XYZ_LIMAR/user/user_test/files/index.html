@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сохранение данных</title>
+</head>
+<body>
+    <button id="saveButton">Сохранить текст</button>
+    <button id="showButton">Показать сохраненные тексты</button>
+    <div id="output"></div>
+
+    <script>
+        // Функция для получения сохраненных данных из Local Storage
+        function getSavedTexts() {
+            const savedTexts = localStorage.getItem('texts');
+            return savedTexts ? JSON.parse(savedTexts) : [];
+        }
+
+        // Функция для сохранения текста в Local Storage
+        function saveText(text) {
+            const texts = getSavedTexts();
+            texts.push(text);
+            localStorage.setItem('texts', JSON.stringify(texts));
+        }
+
+        // Обработчик события для кнопки "Сохранить текст"
+        document.getElementById('saveButton').addEventListener('click', () => {
+            const userInput = prompt('Введите текст:');
+            if (userInput) {
+                saveText(userInput);
+                alert('Текст сохранен!');
+            }
+        });
+
+        // Обработчик события для кнопки "Показать сохраненные тексты"
+        document.getElementById('showButton').addEventListener('click', () => {
+            const texts = getSavedTexts();
+            document.getElementById('output').innerText = texts.join('\n') || 'Нет сохраненных текстов.';
+        });
+    </script>
+</body>
+</html>
